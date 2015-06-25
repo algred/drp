@@ -8,10 +8,11 @@ def read_video(vfile):
     while(True):
         ret, frame = cap.read()
         if not ret:
-            print "Finish reading " + vfile + \
-                    ": " + str(ind) + " frames."
+#             print "Finish reading " + vfile + \
+#                     ": " + str(ind) + " frames."
             break
         frames.append(frame)
+        ind = ind + 1
 
     cap.release()
     return frames
